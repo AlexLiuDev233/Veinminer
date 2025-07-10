@@ -1,0 +1,27 @@
+name: Veinminer
+version: '1.0'
+main: me.alexliudev.veinminer.Veinminer
+api-version: '1.21'
+prefix: Veinminer
+authors: [ AlexLiuDev233 ]
+description: 连锁挖矿
+website: https://github.com/AlexLiuDev233/Veinminer
+
+commands:
+  veinminer:
+    description: 插件主指令
+    usage: /<command> reload
+    permission: "veinminer.admin"
+    permission-message: "你没有权限这样做"
+
+permissions:
+  veinminer.*:
+    children:
+      veinminer.admin: true
+      veinminer.user: true
+  veinminer.admin:
+    description: Veinminer 插件的管理员权限
+    default: op
+  veinminer.user:
+    description: Veinminer 插件的用户权限，需要此权限才能进行连锁
+    default: true

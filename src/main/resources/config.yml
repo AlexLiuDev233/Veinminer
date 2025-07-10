@@ -1,0 +1,10 @@
+vein: #有关于连锁挖矿的配置
+  has_block_white_list: true #是否开启方块连锁白名单系统
+  white_list_blocks: # 如果开启，那么请在这里列出其的id，不要包含minecraft:，且需要为全小写
+    - "diamond_ore"
+    - "iron_ore"
+    - "deepslate_diamond_ore"
+  max_limit: 64 # 单次连锁最大限制，负数或0=无限制，不建议此值过高，以免服务器卡顿，强烈建议不要过高，如果white_list_blocks中存在一种存量很高的方块，同时打开了此选项，可能导致CPU100%
+anticheat: # 反作弊兼容
+  bypass_command: "" # 绕过反作弊指令，%player%=玩家id
+  remove_bypass_command: "" # 取消绕过反作弊指令，%player%=玩家id
