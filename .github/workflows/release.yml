@@ -7,18 +7,17 @@
 
 name: publish release
 
-permissions:
-  contents: write
 on:
   push:
     tags:
       - "v*.*.*"
 
+permissions:
+  contents: write
+
 jobs:
   build:
     runs-on: ubuntu-latest
-    permissions:
-      contents: read
 
     steps:
     - uses: actions/checkout@v4
