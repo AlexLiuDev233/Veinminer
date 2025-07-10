@@ -1,2 +1,2 @@
 # Veinminer
-Abukkit plugin
+一个连锁挖矿bukkit插件
